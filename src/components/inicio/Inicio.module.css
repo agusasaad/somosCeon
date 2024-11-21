@@ -1,0 +1,187 @@
+.inicio {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-image: url('./../../assets/images/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 30px;
+  position: relative;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.815);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+
+  padding: 270px 0px 170px 0px;
+}
+
+.content .title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.title h1 {
+  font-size: 100px;
+  line-height: 110px;
+  font-weight: 600;
+  max-width: 1200px;
+  text-wrap: balance;
+  color: white;
+  letter-spacing: -3px;
+  text-align: center;
+}
+
+.title .subtitle {
+  color: #8a8cff;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.9px;
+  display: flex;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.title p {
+  font-size: 20px;
+  font-weight: 400;
+  color: rgb(211, 211, 211);
+  font-family: var(--inter);
+  line-height: 35px;
+  text-align: center;
+  max-width: 1000px;
+  text-wrap: balance;
+}
+
+.title .button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button .cssbuttons_io_button {
+  background: #7173ff;
+  color: white;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 30px;
+  border: none;
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.cssbuttons_io_button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 30px;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons_io_button:hover .icon {
+  width: calc(100% - 0.6em);
+  border-radius: 30px;
+}
+
+.cssbuttons_io_button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #7173ff;
+}
+
+.cssbuttons_io_button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons_io_button:active .icon {
+  transform: scale(0.95);
+}
+
+.title h1 strong {
+  font-size: 90px;
+  line-height: 110px;
+  font-weight: 400;
+  max-width: 1200px;
+  text-wrap: balance;
+  color: white;
+  letter-spacing: -3px;
+  overflow-y: hidden;
+  font-style: italic;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    padding: 200px 0px 200px 0px;
+  }
+  .title h1 {
+    font-size: 80px;
+    line-height: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title h1 {
+    font-size: 65px;
+    line-height: 80px;
+  }
+}
+
+@media (max-width: 650px) {
+  .content .title {
+    gap: 15px;
+  }
+  .title h1 {
+    font-size: 55px;
+    line-height: 75px;
+  }
+}
+
+@media (max-width: 550px) {
+  .content {
+    background-color: rgba(0, 0, 0, 0.678);
+    padding: 170px 0px 110px 0px;
+  }
+  .content .title {
+    width: 90%;
+    gap: 5px;
+  }
+  .title h1 {
+    font-size: 45px;
+    line-height: 60px;
+    letter-spacing: -1.5px;
+  }
+
+  .title p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+}

@@ -1,0 +1,176 @@
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 100px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 1300px;
+  gap: 70px;
+}
+
+.content .img {
+  width: 550px;
+  height: auto;
+  border-radius: 30px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.text h2 {
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: -2px;
+  text-wrap: balance;
+  line-height: 75px;
+}
+
+.text p {
+  font-size: 16px;
+  color: rgb(63, 63, 63);
+  max-width: 550px;
+}
+
+.container_cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 100%;
+  max-width: 300px;
+  min-height: 140px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.card .gif {
+  width: 80px;
+  height: auto;
+}
+.card p {
+  color: rgb(63, 63, 63);
+}
+
+@media (max-width: 1500px) {
+  .container {
+    padding: 50px 0px;
+  }
+}
+
+@media (max-width: 1350px) {
+  .container {
+    padding: 50px 0px;
+  }
+
+  .content {
+    width: 80%;
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+
+  .content .img {
+    width: 100%;
+  }
+
+  .text p {
+    max-width: 100%;
+  }
+
+  .container_cards {
+    justify-content: flex-start;
+  }
+
+  .card {
+    max-width: 100%;
+    max-width: 400px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1050px) {
+  .content {
+    width: 95%;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .info {
+    gap: 20px;
+  }
+
+  .container_cards {
+    gap: 15px;
+  }
+
+  .card {
+    border: 1px solid rgb(236, 236, 236);
+    max-width: 100%;
+    padding: 20px 20px;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .text h2 {
+    font-size: 55px;
+    line-height: 75px;
+  }
+
+  .container {
+    padding: 30px 0px;
+  }
+
+  .container .img {
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 550px) {
+  .card .gif {
+    width: 70px;
+    height: auto;
+  }
+
+  .card .text {
+    gap: 0px;
+  }
+
+  .card .text p {
+    font-size: 15px;
+  }
+
+  .text h2 {
+    font-size: 40px;
+    line-height: 55px;
+    letter-spacing: -1.5px;
+  }
+
+  .text p {
+    font-size: 16px;
+  }
+}
