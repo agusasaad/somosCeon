@@ -83,7 +83,7 @@ export const animateInicio = (button) => {
     {
       y: 0,
       opacity: 1,
-      delay: 1, // Puedes variar el delay si quieres animaciones escalonadas
+      delay: 2, // Puedes variar el delay si quieres animaciones escalonadas
       duration: 0.7,
       ease: 'power1',
     }

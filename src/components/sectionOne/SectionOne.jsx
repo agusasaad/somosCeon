@@ -33,7 +33,7 @@ const SectionOne = () => {
                   height={80}
                   className={styles.gif}
                 />
-                <div className={styles.text}>
+                <div className={styles.text_card}>
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
                 </div>
