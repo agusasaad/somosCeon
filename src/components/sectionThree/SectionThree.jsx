@@ -46,9 +46,9 @@ const SectionThree = () => {
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
                 <p>{item.horario}</p>
-                <Link href={'/'} className={styles.link}>
+                {/* <Link href={'/'} className={styles.link}>
                   <button>Click aquí</button>
-                </Link>
+                </Link> */}
               </div>
             ))}
           </div>

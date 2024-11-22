@@ -41,3 +41,7 @@ button {
   font-style: normal;
   cursor: pointer;
 }
+
+span {
+  will-change: transform, opacity;
+}

@@ -16,7 +16,7 @@ export const data = [
   {
     title: 'Lamada Directa',
     description:
-      'Si prefieres una llamada, estas a un click de distancia. Comunicate directamente con nuetro equipo de ventas para recibir asesoramiento.',
+      'Si prefieres una llamada, estas a un click de distancia. Comunicate directamente con nuetro equipo de ventas para recibir asesoramiento personalizado.',
     horario: 'Horario de atención: 09:00 a 18:00',
     number: '+54 11 2345-6789',
     icon: <Support width='35px' height='35px' />,

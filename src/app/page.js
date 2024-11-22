@@ -4,6 +4,7 @@ import SectionOne from '@/components/sectionOne/SectionOne'
 import SectionTwo from '@/components/sectionTwo/SectionTwo'
 import NavBar from '@/components/navbar/NavBar'
 import SectionThree from '@/components/sectionThree/SectionThree'
+import SectionFour from '@/components/sectionFour/SectionFour'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <SectionOne />
         <SectionTwo />
         <SectionThree />
+        <SectionFour />
       </main>
     </div>
   )

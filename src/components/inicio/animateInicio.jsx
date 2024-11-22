@@ -5,20 +5,19 @@ export const animateInicio = (button) => {
   const p = document.querySelector('.text')
 
   if (h1) {
-    const words = h1.textContent.split(' ')
-    h1.innerHTML = ''
+    // Verifica si ya contiene spans
+    if (!h1.querySelector('span')) {
+      const words = h1.textContent.split(' ')
+      h1.innerHTML = ''
 
-    words.forEach((word) => {
-      const span = document.createElement('span')
-      span.textContent = word
-      span.style.display = 'inline-block'
-      if (window.innerWidth < 1024) {
-        span.style.marginRight = '10px'
-      } else {
-        span.style.marginRight = '25px'
-      }
-      h1.appendChild(span)
-    })
+      words.forEach((word) => {
+        const span = document.createElement('span')
+        span.textContent = word
+        span.style.display = 'inline-block'
+        span.style.marginRight = window.innerWidth < 1024 ? '10px' : '20px'
+        h1.appendChild(span)
+      })
+    }
 
     const spans = h1.querySelectorAll('span')
 
@@ -42,16 +41,19 @@ export const animateInicio = (button) => {
   }
 
   if (p) {
-    const words_p = p.textContent.split(' ')
-    p.innerHTML = ''
+    // Verifica si ya contiene spans
+    if (!p.querySelector('span')) {
+      const words_p = p.textContent.split(' ')
+      p.innerHTML = ''
 
-    words_p.forEach((word) => {
-      const span = document.createElement('span')
-      span.textContent = word
-      span.style.display = 'inline-block'
-      span.style.marginRight = '5px'
-      p.appendChild(span)
-    })
+      words_p.forEach((word) => {
+        const span = document.createElement('span')
+        span.textContent = word
+        span.style.display = 'inline-block'
+        span.style.marginRight = '5px'
+        p.appendChild(span)
+      })
+    }
 
     const spans_p = p.querySelectorAll('span')
 
@@ -66,8 +68,8 @@ export const animateInicio = (button) => {
         y: 0,
         opacity: 1,
         filter: 'blur(0px)',
-        delay: 0.7, // Puedes variar el delay si quieres animaciones escalonadas
-        duration: 0.6,
+        delay: 0.7,
+        duration: 0.4,
         stagger: 0.1,
         ease: 'power1',
       }
@@ -83,7 +85,7 @@ export const animateInicio = (button) => {
     {
       y: 0,
       opacity: 1,
-      delay: 2, // Puedes variar el delay si quieres animaciones escalonadas
+      delay: 2,
       duration: 0.7,
       ease: 'power1',
     }
