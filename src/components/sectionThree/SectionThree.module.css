@@ -1,0 +1,201 @@
+.container {
+  width: 100%;
+  background-image: url('./../../assets/images/bg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  border-radius: 30px;
+  margin: 30px 0px;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.815);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  border-radius: 30px;
+  padding: 90px 0px;
+}
+
+.title {
+  color: white;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+}
+
+.title h2 {
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: -2.5px;
+  line-height: 75px;
+  text-align: center;
+  text-wrap: balance;
+}
+.title .title_mobile {
+  display: none;
+}
+
+/* .title p {
+  font-size: 20px;
+  font-weight: 400;
+  color: rgb(211, 211, 211);
+  font-family: var(--inter);
+  line-height: 35px;
+  text-align: center;
+  max-width: 1000px;
+  text-wrap: balance;
+} */
+
+.container_cards {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.carrucel_card {
+  width: 100%;
+  max-width: 1250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 20px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.carrucel_card .card {
+  background: #6b6b6b3b;
+  backdrop-filter: blur(10px);
+  width: 100%;
+  min-width: 400px;
+  min-height: 450px;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 15px;
+  border-radius: 30px;
+  color: white;
+}
+.card .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+  background: #7173ffbb;
+}
+
+.card h3 {
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.link {
+  margin-top: 15px;
+}
+
+.link button {
+  font-size: 16px;
+  font-weight: 500;
+  color: #7173ff;
+}
+
+.containerButtonLeft,
+.containerButtonRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 30px;
+}
+.containerButtonLeft button,
+.containerButtonRight button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1500px) {
+  .container {
+    margin: 0px;
+  }
+
+  .carrucel_card {
+    max-width: 920px;
+  }
+
+  .carrucel_card .card {
+    min-width: 450px;
+  }
+}
+
+@media (max-width: 1350px) {
+}
+
+@media (max-width: 1050px) {
+  .content {
+    gap: 30px;
+  }
+  .title {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    background-attachment: scroll;
+    background-position: right;
+  }
+  .content {
+    padding: 50px 0px;
+    background-color: rgba(0, 0, 0, 0.678);
+  }
+  .title .title_desktop {
+    display: none;
+  }
+  .title .title_mobile {
+    display: block;
+  }
+
+  .title h2 {
+    font-size: 55px;
+    line-height: 75px;
+    text-align: start;
+  }
+
+  .containerButtonLeft,
+  .containerButtonRight {
+    display: none;
+  }
+  .carrucel_card {
+    padding: 0px 20px;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 550px) {
+  .title h2 {
+    font-size: 40px;
+    line-height: 55px;
+    letter-spacing: -1.5px;
+    text-wrap: balance;
+  }
+
+  .carrucel_card .card {
+    min-width: 330px;
+    padding: 30px;
+    gap: 15px;
+  }
+}

@@ -75,58 +75,6 @@
   margin-top: 20px;
 }
 
-.button .cssbuttons_io_button {
-  background: #7173ff;
-  color: white;
-  padding: 0.35em;
-  padding-left: 1.2em;
-  font-size: 17px;
-  font-weight: 500;
-  border-radius: 30px;
-  border: none;
-  letter-spacing: 0.03em;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
-  height: 2.8em;
-  padding-right: 3.3em;
-  cursor: pointer;
-}
-
-.cssbuttons_io_button .icon {
-  background: white;
-  margin-left: 1em;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 2.2em;
-  width: 2.2em;
-  border-radius: 30px;
-  right: 0.3em;
-  transition: all 0.3s;
-}
-
-.cssbuttons_io_button:hover .icon {
-  width: calc(100% - 0.6em);
-  border-radius: 30px;
-}
-
-.cssbuttons_io_button .icon svg {
-  width: 1.1em;
-  transition: transform 0.3s;
-  color: #7173ff;
-}
-
-.cssbuttons_io_button:hover .icon svg {
-  transform: translateX(0.1em);
-}
-
-.cssbuttons_io_button:active .icon {
-  transform: scale(0.95);
-}
-
 .title h1 strong {
   font-size: 90px;
   line-height: 110px;
