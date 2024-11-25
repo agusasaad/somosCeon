@@ -34,6 +34,9 @@ const SectionFour = () => {
                   </div>
                 ))}
               </div>
+              <div className={styles.button}>
+                <button>Mas Información</button>
+              </div>
             </div>
           ))}
         </div>

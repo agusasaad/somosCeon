@@ -1,32 +1,20 @@
 export const planesInternet = [
   {
-    nombre: 'Plan Hogar',
+    nombre: 'Plan Básico',
     velocidad: '300 Mbps',
-    incluye: [
-      'Conexión estable para videollamadas y streaming 4K',
-      'Router Wi-Fi de última generación',
-      'Soporte técnico 24/7',
-    ],
+    incluye: ['Hasta 3 dispositivos', 'WiFi básico', 'Soporte 24/7'],
     precio: '$4,500',
   },
   {
-    nombre: 'Plan Comercio',
+    nombre: 'Plan Avanzado',
     velocidad: '500 Mbps',
-    incluye: [
-      'Ancho de banda dedicado para transacciones rápidas',
-      'Seguridad avanzada con firewall incluido',
-      'IP fija para facilitar conexiones remotas',
-    ],
+    incluye: ['Hasta 8 dispositivos', 'Router avanzado', 'Soporte prioritario'],
     precio: '$9,000',
   },
   {
-    nombre: 'Plan Gamer',
+    nombre: 'Plan Premium',
     velocidad: '1 Gbps',
-    incluye: [
-      'Ping ultra bajo para gaming online',
-      'Red prioritaria para evitar interrupciones',
-      'Streaming de videojuegos sin lag',
-    ],
+    incluye: ['Hasta 15 dispositivos', 'WiFi 6', 'Soporte exclusivo'],
     precio: '$12,000',
   },
 ]
