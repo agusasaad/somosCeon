@@ -7,6 +7,7 @@ import SectionThree from '@/components/sectionThree/SectionThree'
 import SectionFour from '@/components/sectionFour/SectionFour'
 import SectionFive from '@/components/sectionFive/SectionFive'
 import SectionSix from '@/components/sectionSix/SectionSix'
+import Footer from '@/components/footer/Footer'
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <SectionFive />
         <SectionSix />
       </main>
+      <Footer />
     </div>
   )
 }

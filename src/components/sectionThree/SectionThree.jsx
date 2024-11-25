@@ -24,7 +24,7 @@ const SectionThree = () => {
     }
   }
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <div className={styles.content}>
         <div className={styles.title}>
           <h2 className={styles.title_desktop}>
@@ -42,7 +42,7 @@ const SectionThree = () => {
           <div className={styles.carrucel_card} ref={carrucelRef}>
             {data.map((item, index) => (
               <div className={styles.card} key={index}>
-                {/* <div className={styles.icon}>{item.icon}</div> */}
+                <div className={styles.icon}>{item.icon}</div>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
                 <p>{item.horario}</p>
@@ -59,7 +59,7 @@ const SectionThree = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

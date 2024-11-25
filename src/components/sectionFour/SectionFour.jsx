@@ -5,7 +5,7 @@ import Button from '../button/Button'
 
 const SectionFour = () => {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <div className={styles.content}>
         <div className={styles.title}>
           <h2>Conozca nuestros planes y precios</h2>
@@ -41,7 +41,7 @@ const SectionFour = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
