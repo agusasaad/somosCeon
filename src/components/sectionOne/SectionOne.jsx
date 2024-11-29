@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import styles from './SectionOne.module.css'
-import image from '@/assets/images/image_section_one.png'
+import image from '@/assets/images/image_section_one.webp'
 import { data } from './data'
 import { useEffect, useRef } from 'react'
 import { animateSectionOne } from './AnimateSectionOne'
@@ -27,6 +27,8 @@ const SectionOne = () => {
           alt='imagen_representativa'
           width={700}
           height={700}
+          quality={50}
+          loading='lazy'
           className={styles.img}
         />
 
@@ -47,6 +49,9 @@ const SectionOne = () => {
                   alt={item.title}
                   width={80}
                   height={80}
+                  unoptimized
+                  quality={50}
+                  loading='lazy'
                   className={styles.gif}
                 />
                 <div className={styles.text_card}>

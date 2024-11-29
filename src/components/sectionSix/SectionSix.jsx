@@ -1,14 +1,23 @@
 'use client'
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { gsap } from 'gsap'
 import Plus from '@/assets/icons/Plus'
 import styles from './SectionSix.module.css'
 import { faqs } from './data'
+import { animateSectionSix } from './AnimateSectionSix'
 
 const SectionSix = () => {
-  const [openIndex, setOpenIndex] = useState(null) // Solo un índice activo
+  const [openIndex, setOpenIndex] = useState(null)
   const faqRefs = useRef([])
   const iconRefs = useRef([])
+
+  const title = useRef(null)
+  const image = useRef(null)
+  const preguntas = useRef(null)
+
+  useEffect(() => {
+    animateSectionSix(image.current, title.current, preguntas.current)
+  })
 
   const handleToggle = (index) => {
     const isOpen = openIndex === index
@@ -62,12 +71,12 @@ const SectionSix = () => {
   }
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id='section_six'>
       <div className={styles.content}>
         <div className={styles.titles}>
-          <h2>Preguntas frecuentes</h2>
+          <h2 ref={title}>Preguntas frecuentes</h2>
         </div>
-        <div className={styles.faq}>
+        <div className={styles.faq} ref={preguntas}>
           {faqs.map((faq, index) => (
             <div
               className={`${styles.question}`}
@@ -99,7 +108,7 @@ const SectionSix = () => {
           ))}
         </div>
       </div>
-      <div className={styles.image}></div>
+      <div className={styles.image} ref={image}></div>
     </section>
   )
 }

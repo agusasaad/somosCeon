@@ -30,6 +30,7 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+  overflow: hidden;
 }
 
 .card_container .card {

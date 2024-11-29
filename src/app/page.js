@@ -5,7 +5,6 @@ import SectionTwo from '@/components/sectionTwo/SectionTwo'
 import NavBar from '@/components/navbar/NavBar'
 import SectionThree from '@/components/sectionThree/SectionThree'
 import SectionFour from '@/components/sectionFour/SectionFour'
-import SectionFive from '@/components/sectionFive/SectionFive'
 import SectionSix from '@/components/sectionSix/SectionSix'
 import Footer from '@/components/footer/Footer'
 
@@ -19,7 +18,6 @@ export default function Home() {
         <SectionTwo />
         <SectionFour />
         <SectionThree />
-        {/* <SectionFive /> */}
         <SectionSix />
       </main>
       <Footer />

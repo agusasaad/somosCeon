@@ -25,11 +25,14 @@ const SectionTwo = () => {
             >
               {item.gif && (
                 <Image
+                  className={styles.gif}
                   src={item.gif}
                   alt={item.title}
                   width={80}
                   height={80}
-                  className={styles.gif}
+                  quality={50}
+                  loading='lazy'
+                  unoptimized
                 />
               )}
               <h3>{item.title}</h3>
