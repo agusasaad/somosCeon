@@ -1,14 +1,19 @@
 import Inicio from '@/components/inicio/Inicio'
 import styles from './page.module.css'
-import SectionOne from '@/components/sectionOne/SectionOne'
-import SectionTwo from '@/components/sectionTwo/SectionTwo'
 import NavBar from '@/components/navbar/NavBar'
-import SectionThree from '@/components/sectionThree/SectionThree'
-import SectionFour from '@/components/sectionFour/SectionFour'
-import SectionSix from '@/components/sectionSix/SectionSix'
 import Footer from '@/components/footer/Footer'
+import dynamic from 'next/dynamic'
 
 export default function Home() {
+  const SectionOne = dynamic(() => import('@/components/sectionOne/SectionOne'))
+  const SectionTwo = dynamic(() => import('@/components/sectionTwo/SectionTwo'))
+  const SectionFour = dynamic(() =>
+    import('@/components/sectionFour/SectionFour')
+  )
+  const SectionThree = dynamic(() =>
+    import('@/components/sectionThree/SectionThree')
+  )
+  const SectionSix = dynamic(() => import('@/components/sectionSix/SectionSix'))
   return (
     <div className={styles.page}>
       <NavBar />
