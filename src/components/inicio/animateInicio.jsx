@@ -1,6 +1,7 @@
 import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 
-export const animateInicio = (button) => {
+export const animateInicio = (container, button) => {
   const h1 = document.querySelector('.title')
   const p = document.querySelector('.text')
 
@@ -14,30 +15,10 @@ export const animateInicio = (button) => {
         const span = document.createElement('span')
         span.textContent = word
         span.style.display = 'inline-block'
-        span.style.marginRight = window.innerWidth < 1024 ? '10px' : '20px'
+        span.style.marginRight = window.innerWidth < 1024 ? '10px' : '15px'
         h1.appendChild(span)
       })
     }
-
-    const spans = h1.querySelectorAll('span')
-
-    gsap.fromTo(
-      spans,
-      {
-        y: 10,
-        opacity: 0,
-        filter: 'blur(10px)',
-      },
-      {
-        y: 0,
-        opacity: 1,
-        filter: 'blur(0px)',
-        delay: 0.5,
-        duration: 0.7,
-        stagger: 0.1,
-        ease: 'power1',
-      }
-    )
   }
 
   if (p) {
@@ -50,44 +31,62 @@ export const animateInicio = (button) => {
         const span = document.createElement('span')
         span.textContent = word
         span.style.display = 'inline-block'
-        span.style.marginRight = '5px'
+        span.style.marginRight = '8px'
         p.appendChild(span)
       })
     }
-
-    const spans_p = p.querySelectorAll('span')
-
-    gsap.fromTo(
-      spans_p,
-      {
-        y: 5,
-        opacity: 0,
-        filter: 'blur(10px)',
-      },
-      {
-        y: 0,
-        opacity: 1,
-        filter: 'blur(0px)',
-        delay: 0.7,
-        duration: 0.4,
-        stagger: 0.1,
-        ease: 'power1',
-      }
-    )
   }
 
-  gsap.fromTo(
-    button,
+  const spans = h1.querySelectorAll('span')
+  const spans_p = p.querySelectorAll('span')
+
+  const tl = gsap.timeline()
+
+  tl.fromTo(
+    spans,
     {
-      y: 100,
+      y: 10,
       opacity: 0,
+      filter: 'blur(10px)',
     },
     {
       y: 0,
       opacity: 1,
-      delay: 2,
+      filter: 'blur(0px)',
       duration: 0.7,
+      delay: 0.3,
+      stagger: 0.1,
       ease: 'power1',
     }
+  )
+
+  tl.fromTo(
+    spans_p,
+    {
+      opacity: 0,
+      filter: 'blur(10px)',
+    },
+    {
+      opacity: 1,
+      filter: 'blur(0px)',
+      duration: 0.5,
+      stagger: 0.1,
+      ease: 'power1',
+    },
+    '-=0.5'
+  )
+  tl.fromTo(
+    button,
+    {
+      opacity: 0,
+      filter: 'blur(10px)',
+    },
+    {
+      opacity: 1,
+      filter: 'blur(0px)',
+      duration: 0.5,
+      ease: 'power1',
+    },
+    '-=0.5'
   )
 }

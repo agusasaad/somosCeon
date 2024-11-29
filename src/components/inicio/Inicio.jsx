@@ -2,28 +2,24 @@
 import styles from './Inicio.module.css'
 import { useEffect, useRef } from 'react'
 import { animateInicio } from './animateInicio'
-import NavBar from '../navbar/NavBar'
+import Link from 'next/link'
 import Button from '../button/Button'
 
 const Inicio = () => {
+  const containerRef = useRef(null)
   const button = useRef(null)
   useEffect(() => {
-    animateInicio(button.current)
+    animateInicio(containerRef.current, button.current)
   })
   return (
-    <section className={styles.inicio}>
+    <section className={styles.inicio} ref={containerRef}>
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.title}>
-            {/* <span className={styles.subtitle}>Navega sin límites</span> */}
-            <h1 className='title'>Conectividad continua & confible.</h1>
-            <p className='text'>
-              Ofrecemos una red de internet diseñada para mantenerte conectado
-              sin interrupciones, brindando velocidad y estabilidad en todo
-              momento.
-            </p>
-            <div className={styles.button} ref={button}>
-              <Button text='Contratar Servicio' />
+            <h1 className='title'>Conectividad Rapida & Confiable</h1>
+            <p className='text'>Internet diseñado para acompañarte siempre</p>
+            <div className={styles.container_button} ref={button}>
+              <Button text='Contratar Servicios' href='/nosotros' />
             </div>
           </div>
         </div>

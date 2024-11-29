@@ -1,10 +1,11 @@
 'use client'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { data } from './data'
 import styles from './SectionThree.module.css'
 import ArrowLeftCarrucel from '@/assets/icons/ArrowLeftCarrucel'
 import ArrowRigthCarrucel from '@/assets/icons/ArrowRigthCarrucel'
 import Link from 'next/link'
+import { animateSectionThree } from './AnimateSectionThree'
 
 const SectionThree = () => {
   const carrucelRef = useRef(null)
@@ -23,12 +24,16 @@ const SectionThree = () => {
       carrucelRef.current.scrollLeft += 420
     }
   }
+
+  useEffect(() => {
+    animateSectionThree()
+  }, [])
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id='section_three'>
       <div className={styles.content}>
         <div className={styles.title}>
           <h2 className={styles.title_desktop}>
-            Contacta con Nosotros de la Forma que Prefieras.
+            Contacta con nosotros de la forma que prefieras.
           </h2>
           <h2 className={styles.title_mobile}>Contactanos</h2>
         </div>

@@ -1,51 +1,31 @@
-.cssbuttons_io_button {
-  background: #7173ff;
-  color: white;
-  padding: 0.35em;
-  padding-left: 1.2em;
-  font-size: 17px;
-  font-weight: 500;
-  border-radius: 30px;
-  border: none;
-  letter-spacing: 0.03em;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
-  height: 2.8em;
-  padding-right: 3.3em;
+.button {
   cursor: pointer;
-}
-
-.cssbuttons_io_button .icon {
-  background: white;
-  margin-left: 1em;
-  position: absolute;
+  border: none;
+  max-width: fit-content;
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 2.2em;
-  width: 2.2em;
-  border-radius: 30px;
-  right: 0.3em;
-  transition: all 0.3s;
+  align-items: center;
+  border-radius: 0.5rem;
+  font-size: 16px;
+  padding: 16px 30px;
+  background-color: rgb(88, 80, 255);
+  transition: all 0.2s linear;
 }
 
-.cssbuttons_io_button:hover .icon {
-  width: calc(100% - 0.6em);
-  border-radius: 30px;
+.button:hover {
+  background-color: #4d44ff;
 }
 
-.cssbuttons_io_button .icon svg {
-  width: 1.1em;
-  transition: transform 0.3s;
-  color: #7173ff;
+.btn_a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  gap: 0.5rem;
+  color: rgb(242 242 242 / 1);
+  text-decoration: none;
 }
 
-.cssbuttons_io_button:hover .icon svg {
-  transform: translateX(0.1em);
-}
-
-.cssbuttons_io_button:active .icon {
-  transform: scale(0.95);
+.btn_svg {
+  margin-right: 0.375rem;
 }

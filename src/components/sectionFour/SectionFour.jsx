@@ -1,19 +1,34 @@
+'use client'
 import Check from '@/assets/icons/Check'
 import { planesInternet } from './data'
 import styles from './SectionFour.module.css'
-import Button from '../button/Button'
+import { useEffect, useRef } from 'react'
+import { animateSectionFour } from './AnimateSectionFour'
 
 const SectionFour = () => {
+  const title = useRef(null)
+  const paragraph = useRef(null)
+  const cards = useRef([])
+
+  useEffect(() => {
+    animateSectionFour(title.current, paragraph.current, cards.current)
+  })
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id='section_four'>
       <div className={styles.content}>
         <div className={styles.title}>
-          <h2>Conozca nuestros planes y precios</h2>
-          <p>Selecciona el plan que mas se ajuste a tus necesidades</p>
+          <h2 ref={title}>Conozca nuestros planes y precios</h2>
+          <p ref={paragraph}>
+            Selecciona el plan que mas se ajuste a tus necesidades
+          </p>
         </div>
         <div className={styles.planes_container}>
           {planesInternet.map((item, index) => (
-            <div className={styles.card} key={index}>
+            <div
+              className={styles.card}
+              key={index}
+              ref={(el) => (cards.current[index] = el)}
+            >
               <div className={styles.info}>
                 <div className={styles.text}>
                   <h5>{item.nombre}</h5>
