@@ -22,8 +22,8 @@
   display: flex;
   justify-content: center;
   border-radius: 30px;
-  min-height: 90vh;
-  padding-top: 50px;
+  align-items: center;
+  padding: 250px 0px 200px 0px;
 }
 
 .content .title {
@@ -120,7 +120,7 @@
 @media (max-width: 550px) {
   .content {
     background-color: rgba(0, 0, 0, 0.678);
-    min-height: 90vh;
+    padding: 150px 0px;
   }
   .content .title {
     width: 90%;
