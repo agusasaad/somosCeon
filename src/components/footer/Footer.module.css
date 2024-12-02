@@ -9,6 +9,7 @@
   background-size: cover;
   background-position: center;
   border-radius: 40px 40px 0px 0px;
+  overflow-x: hidden;
 }
 
 .content {
