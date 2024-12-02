@@ -3,7 +3,6 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 
 export const animateSectionSix = (image, title, preguntas) => {
   gsap.registerPlugin(ScrollTrigger)
-  console.log(title, preguntas)
   gsap.fromTo(
     image,
     {

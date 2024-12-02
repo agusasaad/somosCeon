@@ -17,20 +17,19 @@ const SectionSix = () => {
 
   useEffect(() => {
     animateSectionSix(image.current, title.current, preguntas.current)
-  })
+  }, [])
 
   const handleToggle = (index) => {
     const isOpen = openIndex === index
 
     if (isOpen) {
-      // Cierra la FAQ activa
       const element = faqRefs.current[index]
       gsap.to(element, {
         height: 0,
         duration: 0.5,
         ease: 'power1',
         onComplete: () => {
-          setOpenIndex(null) // Ninguna abierta
+          setOpenIndex(null)
         },
       })
       gsap.to(iconRefs.current[index], {
@@ -39,7 +38,6 @@ const SectionSix = () => {
         ease: 'power1',
       })
     } else {
-      // Cierra la FAQ previamente abierta, si hay
       if (openIndex !== null) {
         const previousElement = faqRefs.current[openIndex]
         gsap.to(previousElement, {
